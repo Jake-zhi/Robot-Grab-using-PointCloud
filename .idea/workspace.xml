@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d47ab5a7-9482-4459-ae91-d1c850e4a995" name="Default Changelist" comment="">
+    <list default="true" id="d47ab5a7-9482-4459-ae91-d1c850e4a995" name="Default Changelist" comment="完成从open3d选取视角，解析视角json,保存相机方向">
+      <change afterPath="$PROJECT_DIR$/about_os.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/temp/trajectory.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/temp/trajectory.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_cam_direction_from_open3d_viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_cam_direction_from_open3d_viewer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pc_visulization.py" beforeDir="false" afterPath="$PROJECT_DIR$/pc_visulization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point_cloud_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/point_cloud_preprocess.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,19 +21,7 @@
         <entry file="file://$PROJECT_DIR$/registration.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
-              <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-              <folding>
-                <element signature="e#34#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/point_cloud_preprocess.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2600">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
+              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
               <folding>
                 <element signature="e#34#54#0" expanded="true" />
               </folding>
@@ -37,10 +30,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pc_visulization.py">
+        <entry file="file://$PROJECT_DIR$/point_cloud_preprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+            <state relative-caret-position="100">
+              <caret line="103" column="43" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
+              <folding>
+                <element signature="e#34#52#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,12 +44,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_cam_direction_from_open3d_viewer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="126">
+              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding>
-                <element signature="e#413#475#0" expanded="true" />
                 <element signature="e#1356#2084#1" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pc_visulization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -110,20 +114,22 @@
         <option value="$PROJECT_DIR$/visulization.py" />
         <option value="$PROJECT_DIR$/get_cam_direction_from_json.py" />
         <option value="$PROJECT_DIR$/dump/view_data.py" />
-        <option value="$PROJECT_DIR$/pc_visulization.py" />
         <option value="$PROJECT_DIR$/registration.py" />
-        <option value="$PROJECT_DIR$/point_cloud_preprocess.py" />
+        <option value="$PROJECT_DIR$/about_os.py" />
         <option value="$PROJECT_DIR$/get_cam_direction_from_open3d_viewer.py" />
+        <option value="$PROJECT_DIR$/point_cloud_preprocess.py" />
+        <option value="$PROJECT_DIR$/pc_visulization.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="72" />
-    <option name="y" value="-9" />
-    <option name="width" value="935" />
-    <option name="height" value="1090" />
+    <option name="x" value="992" />
+    <option name="width" value="937" />
+    <option name="height" value="1088" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -136,6 +142,11 @@
             <path>
               <item name="open3d_registration" type="b2602c69:ProjectViewProjectNode" />
               <item name="open3d_registration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open3d_registration" type="b2602c69:ProjectViewProjectNode" />
+              <item name="open3d_registration" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -161,7 +172,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.get_cam_direction_from_open3d_viewer">
+  <component name="RunManager" selected="Python.point_cloud_preprocess">
     <configuration name="get_cam_direction_from_json" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open3d_registration" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -225,6 +236,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="point_cloud_preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="open3d_registration" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/point_cloud_preprocess.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="registration" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open3d_registration" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -251,12 +283,14 @@
       <item itemvalue="Python.pc_visulization" />
       <item itemvalue="Python.get_cam_direction_from_open3d_viewer" />
       <item itemvalue="Python.registration" />
+      <item itemvalue="Python.point_cloud_preprocess" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.point_cloud_preprocess" />
+        <item itemvalue="Python.pc_visulization" />
         <item itemvalue="Python.get_cam_direction_from_open3d_viewer" />
         <item itemvalue="Python.registration" />
-        <item itemvalue="Python.pc_visulization" />
         <item itemvalue="Python.get_cam_direction_from_json" />
       </list>
     </recent_temporary>
@@ -279,7 +313,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584002537443</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="上传初步成果，实现模型2.5D点云采样，ransac+FPFH的registration">
+      <created>1584005029101</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584005029101</updated>
+    </task>
+    <task id="LOCAL-00003" summary="完成从open3d选取视角，解析视角json,保存相机方向">
+      <created>1584005221672</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584005221672</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -293,40 +341,42 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-7" width="1486" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23655172" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.48106593" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Messages" sideWeight="0.49931034" visible="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32931727" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5006896" side_tool="true" visible="true" weight="0.3297587" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.3253012" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32520324" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.32931727" />
-      <window_info anchor="bottom" id="Version Control" order="5" sideWeight="0.49931034" visible="true" weight="0.3297587" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49931034" weight="0.30923694" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.33868808" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.32931727" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.3292683" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4986207" weight="0.308311" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.33378017" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.4986207" weight="0.32841823" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49793103" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.23655172" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.48106593" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32931727" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5006896" side_tool="true" weight="0.30789825" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.3253012" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5013793" side_tool="true" weight="0.32841823" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32520324" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.32931727" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49931034" weight="0.31039137" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.5073628" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="10" visible="true" weight="0.32931727" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.3292683" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49931034" weight="0.3116531" />
+      <window_info active="true" anchor="bottom" id="Debug" order="6" visible="true" weight="0.33378017" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.4986207" weight="0.32841823" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49793103" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -369,16 +419,18 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="上传初步成果，实现模型2.5D点云采样，ransac+FPFH的registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传初步成果，实现模型2.5D点云采样，ransac+FPFH的registration" />
+    <MESSAGE value="完成从open3d选取视角，解析视角json,保存相机方向" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成从open3d选取视角，解析视角json,保存相机方向" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/get_cam_direction_from_open3d_viewer.py</url>
-          <line>63</line>
+          <line>59</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
@@ -578,13 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/Python37/Lib/site-packages/numpy/lib/npyio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="1211" column="2" lean-forward="true" selection-start-line="1211" selection-start-column="2" selection-end-line="1211" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-991083293/open3d/open3d/registration.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6">
@@ -592,41 +637,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_cam_direction_from_open3d_viewer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="e#413#475#0" expanded="true" />
-            <element signature="e#1356#2084#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/registration.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
-          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
           <folding>
             <element signature="e#34#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud_preprocess.py">
+    <entry file="file://$PROJECT_DIR$/about_os.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2600">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="725">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/site-packages/numpy/lib/npyio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="456" selection-start-line="456" selection-end-line="456" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_cam_direction_from_open3d_viewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding>
-            <element signature="e#34#54#0" expanded="true" />
+            <element signature="e#1356#2084#1" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pc_visulization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point_cloud_preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="103" column="43" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
+          <folding>
+            <element signature="e#34#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

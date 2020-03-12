@@ -11,18 +11,16 @@
 
 '''
 
+editor = "notepad.exe"  # 系统默认文本编辑器(根据实际情况选择)
+filename = "data/model_duck.ply"  # 模型文件
+voxel_size = 5  # 模型体素降采样大小(与主程序一致)
 
-editor = "notepad.exe"                  # 系统默认文本编辑器(根据实际情况选择)
-filename = "data/model_duck.ply"        # 模型文件
-voxel_size = 5                          # 模型体素降采样大小(与主程序一致)
-
-from pc_visulization import prepare_model_and_open3d_visualize
 import json
-import os
-from multiprocessing import Process
-import sys
-import numpy as np
 import time
+from multiprocessing import Process
+import numpy as np
+from about_os import *
+from point_cloud_preprocess import prepare_model_and_open3d_visualize
 
 
 # 解析信息返回front方向和up方向
@@ -30,7 +28,8 @@ import time
 # return front,up
 def save_cam_dir_from_json(out_filename):
     fin = open(".\data\\temp\\trajectory.txt", encoding='utf-8', mode='w')
-    fin.write('请在弹出的open3d显示界面调整物体姿态，调整到满意位置时按下ctrl+c，在本文件中全选，粘贴保存并退出。')
+    fin.write('''请在弹出的open3d显示界面调整物体姿态，调整到满意位置时按下ctrl+c，在本文件中全选，粘贴保存并退出。\n
+             所有角度操作完之后关闭open3d窗口结束。''')
     fin.close()
     os.system(".\data\\temp\\trajectory.txt")
     try:
@@ -79,27 +78,10 @@ def get_cam_directions():
             print("读取json时错误")
 
 
-# 关闭其他应用程序
-# pro_name:将要关闭的程序
-def end_program(pro_name):
-    os.system('%s%s' % ("taskkill /F /IM ", pro_name))
-
-
-# 删除文件夹下所有文件和文件夹
-def del_file_in_folder(path_data):
-    for i in os.listdir(path_data) :# os.listdir(path_data)#返回一个列表，里面是当前目录下面的所有东西的相对路径
-        file_data = path_data + "\\" + i#当前文件夹的下面的所有东西的绝对路径
-        if os.path.isfile(file_data) == True:#os.path.isfile判断是否为文件,如果是文件,就删除.如果是文件夹.递归给del_file.
-            os.remove(file_data)
-        else:
-            del_file_in_folder(file_data)
-            os.rmdir(file_data)
-
-
 def main():
     try:
         process_open3d_visualization = Process(target=prepare_model_and_open3d_visualize,
-                                                       args=(filename, voxel_size))
+                                               args=(filename, voxel_size))
         process_get_cam_directions = Process(target=get_cam_directions)
         process_get_cam_directions.start()
         time.sleep(3)
@@ -112,6 +94,7 @@ def main():
             end_program(editor)
             break
     print("记录相机方向完成，退出。")
+
 
 if __name__ == "__main__":
     main()
