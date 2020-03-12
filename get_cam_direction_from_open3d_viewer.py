@@ -11,9 +11,6 @@
 
 '''
 
-# TODO
-## 根据front, up, origin, 计算相机观察位置
-## 文件存储观察位置(注意增量式)
 
 editor = "notepad.exe"                  # 系统默认文本编辑器(根据实际情况选择)
 filename = "data/model_duck.ply"        # 模型文件
