@@ -18,14 +18,17 @@ def np_to_pcd(pc):
 def pcd_to_np(pcd): return np.asarray(pcd.points)
 
 
-# 读取、预处理数据
+# 读取、预处理数据（ply格式）
 # 传入至少一个文件名
 # 传入一个文件名，返回src_pc, src_pc_down, src_pc_fpfh
 # 传入两个文件你，返回src_pc, dst_pc, src_pc_down, dst_pc_down, src_pc_fpfh, dst_pc_fpfh
-def prepare_data(src_filename, dst_filename="", voxel_size=5):
+def prepare_data(src_filename, dst_filename="", voxel_size=5,):
     print("Open file %s,:" % src_filename)
     src_pc = o3d.io.read_point_cloud(src_filename)
     src_pc_down, src_pc_fpfh = preprocess_point_cloud(src_pc, voxel_size)
+    # 加载csv并作格式转化
+    # source = np_to_pcd(np.genfromtxt('data/ds.csv', delimiter=','))
+    # target = np_to_pcd(np.genfromtxt('data/dst.csv', delimiter=','))
     if not dst_filename == "":
         print("Open file %s,:" % dst_filename)
         dst_pc = o3d.io.read_point_cloud(dst_filename)
@@ -77,7 +80,7 @@ def display_inlier_outlier(cloud, ind):
 
 
 # 对模型的八个方向取2.5D点云
-def get_2_5D_pc_8Direction(src_pc, src_fpfh):
+def get_2_5D_pc_8Direction(src_pc, src_fpfh, visulization=False):
     result_pc = []
     result_fpfh = []
     d = np.linalg.norm(np.asarray(src_pc.get_max_bound()) - np.asarray(src_pc.get_min_bound()))
@@ -90,47 +93,48 @@ def get_2_5D_pc_8Direction(src_pc, src_fpfh):
                [-d / 2, -d / 2, d / 2],
                [-d / 2, -d / 2, -d / 2]]
     for cam_loc_i in cam_loc:
-        src_removed, point_list = src_pc.hidden_point_removal(cam_loc_i, 100 * d)
+        _, point_list = src_pc.hidden_point_removal(cam_loc_i, 100 * d)
 
-        src_pc_removed = o3d.geometry.PointCloud()
-        src_pc_removed.points = src_removed.vertices
-        result_pc.append(src_pc_removed)
+        src_pc_one_direction = src_pc.select_down_sample(point_list)
+        result_pc.append(src_pc_one_direction)
 
         src_fpfh_removed = o3d.registration.Feature()
         src_fpfh_removed.data = src_fpfh.data[:, point_list]
         result_fpfh.append(src_fpfh_removed)
 
         # 显示
-        src_pc.paint_uniform_color([1, 0, 0])
-        src_pc_removed.paint_uniform_color([0, 1, 0])
-        camera_frame = o3d.geometry.TriangleMesh.create_coordinate_frame(size=d / 5, origin=cam_loc_i)
-        pc_visulization.open3d_visualize([src_pc_removed, src_pc, camera_frame])
+        if visulization:
+            src_pc.paint_uniform_color([1, 0, 0])
+            src_pc_one_direction.paint_uniform_color([0, 1, 0])
+            camera_frame = o3d.geometry.TriangleMesh.create_coordinate_frame(size=d / 5, origin=cam_loc_i)
+            pc_visulization.open3d_visualize([src_pc_one_direction, src_pc, camera_frame])
     return result_pc, result_fpfh
 
 
 # 对模型指定方向取2.5D点云
-def get_2_5D_pc_DirectionFromFile(src_pc, src_fpfh, direction_file_dir):
+# direction_file_dir 为存储方向文本的文件夹目录
+def get_2_5D_pc_DirectionFromFile(src_pc, src_fpfh, direction_file_dir, visulization=False):
     file_list = for_files_in_dir(direction_file_dir)
     result_pc = []
     result_fpfh = []
     d = np.linalg.norm(np.asarray(src_pc.get_max_bound()) - np.asarray(src_pc.get_min_bound()))
     for file in file_list:
         cam_loc_i = np.loadtxt(file) * d / 2
-        src_removed, point_list = src_pc.hidden_point_removal(cam_loc_i, 100 * d)
+        _, point_list = src_pc.hidden_point_removal(cam_loc_i, 100 * d)
 
-        src_pc_removed = o3d.geometry.PointCloud()
-        src_pc_removed.points = src_removed.vertices
-        result_pc.append(src_pc_removed)
+        src_pc_one_direction = src_pc.select_down_sample(point_list)
+        result_pc.append(src_pc_one_direction)
 
         src_fpfh_removed = o3d.registration.Feature()
         src_fpfh_removed.data = src_fpfh.data[:, point_list]
         result_fpfh.append(src_fpfh_removed)
 
         # 显示
-        src_pc.paint_uniform_color([1, 0, 0])
-        src_pc_removed.paint_uniform_color([0, 1, 0])
-        camera_frame = o3d.geometry.TriangleMesh.create_coordinate_frame(size=d / 5, origin=cam_loc_i)
-        pc_visulization.open3d_visualize([src_pc_removed, src_pc, camera_frame])
+        if visulization:
+            src_pc.paint_uniform_color([1, 0, 0])
+            src_pc_one_direction.paint_uniform_color([0, 1, 0])
+            camera_frame = o3d.geometry.TriangleMesh.create_coordinate_frame(size=d / 5, origin=cam_loc_i)
+            pc_visulization.open3d_visualize([src_pc_one_direction, src_pc, camera_frame])
     return result_pc, result_fpfh
 
 
