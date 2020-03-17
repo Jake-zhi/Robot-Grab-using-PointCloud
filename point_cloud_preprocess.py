@@ -42,10 +42,13 @@ def prepare_data(src_filename, dst_filename="", voxel_size=5,):
 
 # 预处理
 # 降采样,剔除离群点,提取FPFH特征
+# voxel_size<0 为不降采样
 def preprocess_point_cloud(pcd, voxel_size, remove_outlier=False):
     # 降采样
-    pcd_down = pcd.voxel_down_sample(voxel_size)
-    # pcd_down = pcd
+    if(voxel_size<0):
+        pcd_down = pcd
+    else:
+        pcd_down = pcd.voxel_down_sample(voxel_size)
     # 离群点剔除
     if (remove_outlier):
         cl, ind = pcd_down.remove_radius_outlier(nb_points=25, radius=3 * voxel_size)
@@ -138,9 +141,12 @@ def get_2_5D_pc_DirectionFromFile(src_pc, src_fpfh, direction_file_dir, visuliza
     return result_pc, result_fpfh
 
 
-def prepare_model_and_open3d_visualize(filename, voxel_size=4):
+def prepare_model_and_open3d_visualize(filename, voxel_size=4, editing=False):
     src_pc, _, _ = prepare_data(filename, voxel_size=voxel_size)
-    pc_visulization.open3d_visualize([src_pc])
+    if editing:
+        pc_visulization.open3d_visualize_with_editing([src_pc])
+    else:
+        pc_visulization.open3d_visualize([src_pc])
 
 
 def prepare_model_and_plt_visualize(filename, voxel_size=4):

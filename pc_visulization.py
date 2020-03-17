@@ -26,9 +26,16 @@ def open3d_visualize(pc_list):
     try:
         o3d.visualization.draw_geometries(pc_list)
     except RuntimeError:
-        print("o3d bug.")
+        print("o3d bug. Setting GPU to NVIDIA's graphics card may work.")
         open3d_visualize(pc_list)
 
+
+def open3d_visualize_with_editing(pc_list):
+    try:
+        o3d.visualization.draw_geometries_with_editing(pc_list)
+    except RuntimeError:
+        print("o3d bug. Setting GPU to NVIDIA's graphics card may work.")
+        open3d_visualize_with_editing(pc_list)
 
 def plt_visualize(pc_list):
     fig = plt.figure()
