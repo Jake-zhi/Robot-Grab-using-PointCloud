@@ -8,7 +8,6 @@ import cv2
 from process_data.about_os import for_files_in_folder
 import open3d as o3d
 from process_data.point_cloud_preprocess import prepare_data, preprocess_point_cloud
-
 voxel_size = 4
 
 
@@ -66,7 +65,7 @@ def main():
 
     # registration位姿估计
     for this_estimation in pose_estimation_list:
-        print("registration:" + classes[this_estimation.label])
+        print("rgb_d_to_pointcloud:" + classes[this_estimation.label])
         # print("camera direction file folder is: data/model/%s/cam_dirs" % this_estimation.label)
         # run_registration(this_estimation.model, this_estimation.scene, direction_file_dir=("data/model/%s/cam_dirs"%this_estimation.label), voxel_size=voxel_size)
         pose = run_registration(this_estimation.model, this_estimation.scene, voxel_size=voxel_size)
