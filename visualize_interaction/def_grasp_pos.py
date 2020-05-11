@@ -5,9 +5,10 @@
 '''
 
 editor = "notepad.exe"  # 系统默认文本编辑器(根据实际情况选择)
-model_dir = "../data/model/0/"
-filename = model_dir + "model_duck.ply"  # 模型文件
-grasp_pose_filename = model_dir + "grasp_pose/frame.txt"
+model_num = 8
+model_dir = "../data/model/using/%s/" % model_num
+filename = model_dir + "%s.ply" % model_num  # 模型文件
+grasp_pose_filename = model_dir + "grab_pose_transformation.npy"
 voxel_size = 5  # 模型体素降采样大小(与主程序一致)
 
 import open3d as o3d
@@ -62,18 +63,19 @@ def main():
                                      grasp_origin + y_positive,
                                      grasp_origin + z_positive)))
 
-    np.savetxt(grasp_pose_filename, grasp_pose)
     origin_frame = np_to_pcd(np.array([[1, 0, 0],
                                        [0, 1, 0],
                                        [0, 0, 1]]))
     corrs = o3d.utility.Vector2iVector(np.array([[0, 0], [1, 1], [2, 2]]))
     estimator = o3d.registration.TransformationEstimationPointToPoint()
-    R = estimator.compute_transformation(origin_frame, new_frame, corrs)
+    transformation = estimator.compute_transformation(origin_frame, new_frame, corrs)
 
+    np.save(grasp_pose_filename, transformation)
+    
     #画出夹爪坐标系
     d = np.linalg.norm(np.asarray(model.get_max_bound()) - np.asarray(model.get_min_bound()))
     grasp_frame = o3d.geometry.TriangleMesh.create_coordinate_frame(size=d / 5)
-    grasp_frame.transform(R)
+    grasp_frame.transform(transformation)
 
     o3d.visualization.draw_geometries([model, grasp_frame])
 

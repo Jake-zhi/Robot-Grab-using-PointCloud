@@ -66,7 +66,7 @@ def display_inlier_outlier(cloud, ind):
     print("Showing outliers (red) and inliers (gray): ")
     outlier_cloud.paint_uniform_color([1, 0, 0])
     inlier_cloud.paint_uniform_color([0.8, 0.8, 0.8])
-    pc_visulization.plt_visualize([inlier_cloud, outlier_cloud])
+    pc_visulization.open3d_visualize([inlier_cloud, outlier_cloud])
 
 
 # 对模型的八个方向取2.5D点云
@@ -123,7 +123,7 @@ def get_2_5D_pc_DirectionFromFile(src_pc, src_fpfh, direction_file_dir, mode='ru
         result_fpfh.append(src_fpfh_removed)
 
         # 显示
-        if mode=='debug':
+        if mode == 'debug':
             src_pc.paint_uniform_color([1, 0, 0])
             src_pc_one_direction.paint_uniform_color([0, 1, 0])
             camera_frame = o3d.geometry.TriangleMesh.create_coordinate_frame(size=d / 5, origin=cam_loc_i)

@@ -6,7 +6,7 @@ import time
 
 
 def execute_ransac_global_registration(source_down, target_down, source_fpfh, target_fpfh, voxel_size,
-                max_iteration=1000000, max_validation=5000000, fitness_threshold=0.9, inlier_rmse_threshold=10):
+                max_iteration=800000, max_validation=400000, fitness_threshold=0.9, inlier_rmse_threshold=10):
     ransac_n = 4
     distance_threshold = voxel_size*3
 
@@ -43,7 +43,7 @@ def refine_registration(source, target, registration_result, voxel_size):
     return result
 
 
-def run_registration(model, scene, direction_file_dir="data/cam_dirs", voxel_size=8):
+def run_registration(model, scene, voxel_size=8):
     # 读取数据
     # 恐龙
     # voxel_size = 5
@@ -81,13 +81,14 @@ def run_registration(model, scene, direction_file_dir="data/cam_dirs", voxel_siz
         # fast
         # this_registration_result = execute_fast_global_registration(this_25D_model, dst_pc_down, this_25D_fpfh, dst_pc_down_fpfh, voxel_size)
         print("run_registration fitness is %.3f\ninlier_rmse is %.3f" % (this_registration_result.fitness, this_registration_result.inlier_rmse))
+        print("ransac registration processing time: ", time.time() - start)
 
+        start = time.time()
         # ICP
         this_refined_result = refine_registration(this_25D_model, dst_pc_down, this_registration_result, voxel_size)
         # refined_result = registration_result
-        print("processing time: ", time.time() - start)
         print("refined fitness is %.3f\ninlier_rmse is %.3f" % (this_refined_result.fitness, this_refined_result.inlier_rmse))
-
+        print("ICP processing time: ", time.time() - start)
 
         # run_registration icp 二选一
         if(this_refined_result.inlier_rmse <= this_registration_result.inlier_rmse and this_refined_result.fitness>=this_registration_result.fitness-0.2):
@@ -109,21 +110,6 @@ def run_registration(model, scene, direction_file_dir="data/cam_dirs", voxel_siz
 
     print('''********************************************************************************
 final fitness is %.3f\ninlier_rmse is %.3f''' % (final_result.fitness, final_result.inlier_rmse))
-
-    # 计算、显示结果
-    R = final_result.transformation
-    # src_trans_np=np.dot(src_np,R[:3,:3].T)+R[:3,3].T
-
-    final_model_trans = final_model.transform(R)
-    full_model_trans = src_pc.transform(R)
-
-    dst_pc_down.paint_uniform_color([0, 1, 0])
-    final_model_trans.paint_uniform_color([1, 0, 0])
-    open3d_visualize([final_model_trans, dst_pc_down])
-
-    dst_pc.paint_uniform_color([0, 1, 0])
-    full_model_trans.paint_uniform_color([1, 0, 0])
-    open3d_visualize([full_model_trans, dst_pc])
     return final_result
 
 if __name__ == '__main__':

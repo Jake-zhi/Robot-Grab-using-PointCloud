@@ -3,14 +3,6 @@
 
 import os
 
-# 返回文件夹下的文件目录
-# def for_files_in_folder(rootdir):
-#     file_list = []
-#     for name in os.listdir(rootdir) :       # os.listdir(path_data)#返回一个列表，里面是当前目录下面的所有东西的相对路径
-#         file_name = rootdir + "\\" + name   #当前文件夹的下面的所有东西的绝对路径
-#         file_list.append(file_name)
-#     return file_list
-
 def for_files_in_folder(rootdir, file_name_extension_filter=[], dir_name_filter=[]): # 设置过滤后的文件类型 例如 filter = [".png"]
     result = []  # 所有的文件
     for maindir, subdir, file_name_list in os.walk(rootdir):
@@ -49,4 +41,14 @@ def del_file_in_folder(path_data):
         else:
             del_file_in_folder(file_data)
             os.rmdir(file_data)
+
+import open3d as o3d
+folder = "D:\CODE&DATA\CODE\\robot_grasp\data\model\combined_model\down_sample"
+file_list = for_files_in_folder(folder, file_name_extension_filter=['.ply'])
+voxel_size = 1
+for filename in file_list:
+    print(filename)
+    pc = o3d.io.read_point_cloud(filename)
+    pc_down = pc.voxel_down_sample(voxel_size)
+    o3d.io.write_point_cloud(filename, pc_down)
 

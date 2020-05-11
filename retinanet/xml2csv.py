@@ -66,6 +66,9 @@ if __name__ == "__main__":
     Annotations.sort()
     JPEGfiles = get_file_index(file_address, '.png') #可根据自己数据集图片后缀名修改
     JPEGfiles.sort()
+    print("Annotations: ", len(Annotations))
+    print("imgs: ", len(JPEGfiles))
+
     assert len(Annotations) == len(JPEGfiles) #若XML文件和图片文件名不能一一对应即报错
     file_dict = dict(zip(Annotations, JPEGfiles))
     num = len(Annotations)
