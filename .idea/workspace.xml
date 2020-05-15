@@ -2,275 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d47ab5a7-9482-4459-ae91-d1c850e4a995" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hardware/camera/RGB_D.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hardware/camera/kinect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hardware/camera/stereo_calibrate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hardware/robot/TCP_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hardware/robot/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/open3d_registration.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/open3d_registration.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hardware/hand_eye_calibration_selfmade/calibrate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hardware/hand_eye_calibration_selfmade/points_in_robot_base.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/model/0/cam_dirs/dir_0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/model/0/grasp_pose/frame.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/model/0/model_duck.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/model/1/cam_dirs/dir_0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/model/1/model_pot.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/model/2/model_cup.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/model/3/model3_ds.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000013.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000014.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000015.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000016.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000017.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000018.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000019.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000020.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000021.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000022.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000023.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000025.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000026.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000027.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000028.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000029.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000030.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000031.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000032.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000033.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000034.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000035.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000036.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000037.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000038.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000039.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000040.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000041.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000042.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000043.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000044.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000045.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000046.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000047.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000048.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000049.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000050.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000051.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000052.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000053.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000054.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000055.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000056.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000057.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000058.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000059.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000060.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000061.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000062.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000063.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000064.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000065.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000066.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000067.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000068.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000069.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000070.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000071.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000072.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000073.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000074.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000075.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000076.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000077.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000078.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000079.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000080.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000081.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000082.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000083.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000084.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000085.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000086.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000087.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000088.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000089.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000090.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000091.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000092.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000093.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000094.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000095.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000096.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000097.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000098.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/depth/000099.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000013.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000014.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000015.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000016.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000017.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000018.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000019.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000020.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000021.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000022.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000023.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000025.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000026.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000027.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000028.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000029.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000030.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000031.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000032.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000033.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000034.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000035.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000036.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000037.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000038.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000039.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000040.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000041.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000042.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000043.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000044.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000045.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000046.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000047.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000048.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000049.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000050.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000051.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000052.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000053.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000054.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000055.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000056.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000057.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000058.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000059.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000060.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000061.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000062.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000063.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000064.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000065.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000066.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000067.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000068.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000069.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000070.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000071.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000072.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000073.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000074.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000075.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000076.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000077.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000078.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000079.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000080.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000081.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000082.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000083.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000084.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000085.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000086.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000087.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000088.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000089.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000090.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000091.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000092.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000093.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000094.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000095.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000096.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000097.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000098.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene/rgb/000099.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene_ds.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene_duck&amp;pot.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene_duck.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene_duck_with_noisy_background.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene_only_duck.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scene/scene_only_pot.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/RGB+D.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/batch_resize.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/camera/batch_resize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/camera.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/camera/chess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/camera_calibrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/camera/camera_calibrate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/chease_board/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/chease_board/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/chease_board/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/chease_board/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/chease_board/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/chease_board/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/chease_board/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/chease_board/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/chease_board/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/chease_board/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/D/Calib_Results.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/D/Calib_Results_left.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/D/D_1.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/D/D_2.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/D/D_3.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/D/D_4.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/D/D_5.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/D/D_6.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/D/calib_data.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/calibration_result/intrinsic_mtx.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/rgb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/rgb/Calib_Results.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/rgb/Calib_Results_right.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/rgb/RGB_1.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/rgb/RGB_2.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/rgb/RGB_3.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/rgb/RGB_4.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/rgb/RGB_5.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/rgb/RGB_6.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/data/rgb/calib_data.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/moveit_fk_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/robot/moveit_fk_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/moveit_ik_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/robot/moveit_ik_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/camera/RGB_D.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/camera/RGB_D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/camera/kinect.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/camera/kinect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/chess.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pos_estimation/registration.py" beforeDir="false" afterPath="$PROJECT_DIR$/pos_estimation/registration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_data/about_os.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_data/about_os.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_data/point_cloud_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_data/point_cloud_preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/retinanet/class.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_data/depth_img_copy_mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_data/depth_img_copy_mask.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/retinanet/detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/retinanet/detection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/retinanet/train.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retinanet/val.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retinanet/xml2csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/retinanet/xml2csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize_interaction/def_grasp_pos.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize_interaction/def_grasp_pos.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -281,22 +22,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hardware/hand_eye_calibration/hand_eye_calibrate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1175">
-              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hardware/camera/kinect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="-1914">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -305,22 +34,51 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hardware/camera/stereo_calibrate.py">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="-17">
+              <caret line="163" column="50" selection-start-line="163" selection-start-column="50" selection-end-line="163" selection-end-column="50" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
+        <entry file="file://$PROJECT_DIR$/hardware/hand_eye_calibration_selfmade/points_in_robot_base.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/camera/RGB_D.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
+            <state relative-caret-position="-264">
+              <caret line="347" selection-start-line="347" selection-end-line="347" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/retinanet/detection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="77" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/robot/urx_example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-350">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -329,28 +87,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/Python37/Lib/site-packages/keras_retinanet/utils/visualization.py">
+        <entry file="file://$PROJECT_DIR$/hardware/hand_eye_calibration_matlab/hand_eye_calibrate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state relative-caret-position="512">
+              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-991083293/builtins.py">
+        <entry file="file://$PROJECT_DIR$/visualize_interaction/def_grasp_pos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="3680" column="8" selection-start-line="3680" selection-start-column="8" selection-end-line="3680" selection-end-column="8" />
+            <state relative-caret-position="125">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <folding>
+                <element signature="n#!!doc" />
+                <element signature="e#34#42#1" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/Python37/Lib/site-packages/keras/engine/training.py">
+        <entry file="file://$PROJECT_DIR$/hardware/hand_eye_calibration_selfmade/calibrate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="1564" column="8" selection-start-line="1564" selection-start-column="8" selection-end-line="1564" selection-end-column="8" />
+            <state relative-caret-position="700">
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-991083293/open3d/open3d/registration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="1150" column="8" selection-start-line="1150" selection-start-column="8" selection-end-line="1150" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -366,27 +143,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>read</find>
-      <find>astype</find>
-      <find>glob</find>
-      <find>detection result</find>
-      <find>time</find>
-      <find>ravel</find>
-      <find>o3d.vi</find>
-      <find>outlier</find>
-      <find>col</find>
-      <find>FRAME_WIDTH</find>
-      <find>DEPTH_DEPTH_FRAME_WIDTH</find>
-      <find>imageGy</find>
-      <find>img_color</find>
-      <find>rgb</find>
-      <find>load_calibration_json</find>
       <find>device_get_calibration</find>
       <find>calibration</find>
       <find>parame</find>
       <find>cali</find>
       <find>imshow</find>
-      <find>models</find>
       <find>conve</find>
       <find>convert_depth_img</find>
       <find>remap</find>
@@ -396,6 +157,22 @@
       <find>detect_and_registration</find>
       <find>color</find>
       <find>depth2pc</find>
+      <find>t_</find>
+      <find>read_models</find>
+      <find>class</find>
+      <find>open model file</find>
+      <find>假</find>
+      <find>read</find>
+      <find>model</find>
+      <find>result</find>
+      <find>models</find>
+      <find>detect_logger</find>
+      <find>registrate_pose_estimation_queue</find>
+      <find>d_WID</find>
+      <find>d_HGT</find>
+      <find>img_depth_buff</find>
+      <find>img_buff</find>
+      <find>\</find>
     </findStrings>
     <replaceStrings>
       <replace>scene_pc</replace>
@@ -404,11 +181,15 @@
       <replace>src</replace>
       <replace>dst</replace>
       <replace>process</replace>
-      <replace>/</replace>
       <replace>DEPTH_FRAME_WIDTH</replace>
       <replace>img_color</replace>
       <replace>COLOR</replace>
       <replace>color</replace>
+      <replace>result</replace>
+      <replace>result_</replace>
+      <replace>pose_estimation_queue</replace>
+      <replace>DEPTH_HGT</replace>
+      <replace>/</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -424,8 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/get_cam_direction_from_open3d_viewer.py" />
-        <option value="C:/Program Files/Python37/Lib/site-packages/imageai/Detection/keras_retinanet/backend/tensorflow_backend.py" />
         <option value="$PROJECT_DIR$/detection2.py" />
         <option value="$PROJECT_DIR$/detection.py" />
         <option value="$PROJECT_DIR$/point_cloud_preprocess.py" />
@@ -433,7 +212,6 @@
         <option value="$PROJECT_DIR$/registration.py" />
         <option value="$PROJECT_DIR$/../depth2pc/convert_depth_img.py" />
         <option value="$PROJECT_DIR$/process_data/def_grasp_pos.py" />
-        <option value="$PROJECT_DIR$/process_data/depth_img_copy_mask.py" />
         <option value="$PROJECT_DIR$/retinanet/class.csv" />
         <option value="$PROJECT_DIR$/visualize_interaction/get_cam_direction_from_open3d_viewer.py" />
         <option value="$PROJECT_DIR$/hardware/wbz.py" />
@@ -458,30 +236,33 @@
         <option value="$PROJECT_DIR$/hardware/camera/__init__.py" />
         <option value="$PROJECT_DIR$/hardware/hand_eye_calibrate.py" />
         <option value="$PROJECT_DIR$/hardware/Camera-to-Arm-Calibration/hand_eye_calibrate.py" />
-        <option value="$PROJECT_DIR$/pos_estimation/registration.py" />
         <option value="$PROJECT_DIR$/process_data/point_cloud_preprocess.py" />
         <option value="$PROJECT_DIR$/process_data/about_os.py" />
         <option value="$PROJECT_DIR$/hardware/camera/kinect2.py" />
         <option value="$PROJECT_DIR$/visualize_interaction/def_grasp_pos.py" />
         <option value="$PROJECT_DIR$/hardware/robot/TCP_client.py" />
         <option value="$PROJECT_DIR$/hardware/hand_eye_calibration/test.m" />
-        <option value="$PROJECT_DIR$/hardware/hand_eye_calibration/hand_eye_calibrate.py" />
         <option value="$USER_HOME$/Desktop/Azure-Kinect-Samples-master/pipe-to-python-samples/pipeClientReadImages.py" />
         <option value="C:/Program Files/Python37/Lib/site-packages/pyk4a/pyk4a.py" />
         <option value="$PROJECT_DIR$/hardware/camera/stereo_calibrate.py" />
         <option value="$PROJECT_DIR$/hardware/camera/depth2pc/convert_depth_img.py" />
         <option value="$PROJECT_DIR$/hardware/camera/depth2pc/__init__.py" />
-        <option value="$PROJECT_DIR$/hardware/camera/kinect.py" />
-        <option value="$PROJECT_DIR$/retinanet/detection.py" />
-        <option value="$PROJECT_DIR$/hardware/camera/RGB_D.py" />
+        <option value="$PROJECT_DIR$/pos_estimation/registration.py" />
+        <option value="$PROJECT_DIR$/process_data/depth_img_copy_mask.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/hardware/camera/kinect.py" />
+        <option value="$PROJECT_DIR$/hardware/camera/RGB_D.py" />
+        <option value="$PROJECT_DIR$/hardware/hand_eye_calibration/hand_eye_calibrate.py" />
+        <option value="$PROJECT_DIR$/retinanet/detection.py" />
+        <option value="$PROJECT_DIR$/hardware/hand_eye_calibration_matlab/hand_eye_calibrate.py" />
+        <option value="$PROJECT_DIR$/hardware/hand_eye_calibration_selfmade/calibrate.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="751" />
-    <option name="y" value="-32" />
-    <option name="width" value="1893" />
+    <option name="x" value="82" />
+    <option name="y" value="-11" />
+    <option name="width" value="1683" />
     <option name="height" value="2171" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -508,7 +289,13 @@
               <item name="robot_grasp" type="b2602c69:ProjectViewProjectNode" />
               <item name="robot_grasp" type="462c0819:PsiDirectoryNode" />
               <item name="hardware" type="462c0819:PsiDirectoryNode" />
-              <item name="camera" type="462c0819:PsiDirectoryNode" />
+              <item name="hand_eye_calibration_matlab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robot_grasp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robot_grasp" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
+              <item name="hand_eye_calibration_selfmade" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="robot_grasp" type="b2602c69:ProjectViewProjectNode" />
@@ -529,20 +316,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hardware/robot" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Zhang Lantao\Desktop\CODE&amp;DATA\CODE\open3d_registration\data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\CODE&amp;DATA\CODE\robot_grasp\hardware\camera" />
       <recent name="D:\CODE&amp;DATA\CODE\robot_grasp\hardware\robot" />
       <recent name="C:\Users\Zhang Lantao\Desktop\CODE&amp;DATA\CODE\robot_grasp\visualize_interaction" />
       <recent name="C:\Users\Zhang Lantao\Desktop\CODE&amp;DATA\CODE\open3d_registration\pos_estimation" />
       <recent name="C:\Users\Zhang Lantao\Desktop\CODE&amp;DATA\CODE\open3d_registration\visualize&amp;interaction" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CODE&amp;DATA\CODE\robot_grasp\hardware\robot" />
+      <recent name="C:\Users\Zhang Lantao\Desktop\CODE&amp;DATA\CODE\open3d_registration\data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -557,7 +345,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.detection">
+  <component name="RunManager" selected="Python.calibrate">
     <configuration name="RGB_D" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open3d_registration" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -571,6 +359,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hardware/camera/RGB_D.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="calibrate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="open3d_registration" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hardware/hand_eye_calibration_selfmade" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hardware/hand_eye_calibration_selfmade/calibrate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -600,7 +409,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="image" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="hand_eye_calibrate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open3d_registration" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -608,11 +417,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="C:/Program Files/Python37/Lib/site-packages/keras_retinanet/utils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hardware/hand_eye_calibration_matlab" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:/Program Files/Python37/Lib/site-packages/keras_retinanet/utils/image.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hardware/hand_eye_calibration_matlab/hand_eye_calibrate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -621,7 +430,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="kinect" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="hand_eye_calibrate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open3d_registration" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -629,11 +438,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hardware/camera" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hardware/hand_eye_calibration" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hardware/camera/kinect.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hardware/hand_eye_calibration/hand_eye_calibrate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -664,19 +473,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.kinect" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.RGB_D" />
       <item itemvalue="Python.detection" />
-      <item itemvalue="Python.image" />
+      <item itemvalue="Python.hand_eye_calibrate" />
+      <item itemvalue="Python.calibrate" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.calibrate" />
+        <item itemvalue="Python.hand_eye_calibrate" />
         <item itemvalue="Python.detection" />
-        <item itemvalue="Python.image" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.hand_eye_calibrate" />
         <item itemvalue="Python.RGB_D" />
-        <item itemvalue="Python.kinect" />
       </list>
     </recent_temporary>
   </component>
@@ -754,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586336525464</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="主要是RGBD融合 Kinect读取">
+      <created>1589202572695</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589202572695</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -770,15 +586,15 @@
     <frame x="55" y="-7" width="2513" height="1455" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.102947116" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.11909568" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32728648" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50206894" side_tool="true" weight="0.308311" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.3227513" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.3201521" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.32775664" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49793103" visible="true" weight="0.30990174" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.276644" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32501888" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49793103" visible="true" weight="0.31368104" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4015209" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.4986207" weight="0.32841823" />
@@ -790,15 +606,15 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18566775" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.20782396" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32728648" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50206894" side_tool="true" weight="0.308311" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.3227513" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32048374" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.32775664" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49793103" visible="true" weight="0.31382978" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.2781155" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.3269962" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49793103" weight="0.3121693" />
+      <window_info active="true" anchor="bottom" id="Debug" order="6" visible="true" weight="0.40287226" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.4986207" weight="0.32841823" />
@@ -868,17 +684,11 @@
     <MESSAGE value="手动定义抓取位置，在模型中画出抓取位姿（画出机械夹爪坐标系）" />
     <MESSAGE value="一丢丢小改进" />
     <MESSAGE value="相机标定，双目标定" />
-    <option name="LAST_COMMIT_MESSAGE" value="相机标定，双目标定" />
+    <MESSAGE value="主要是RGBD融合 Kinect读取" />
+    <option name="LAST_COMMIT_MESSAGE" value="主要是RGBD融合 Kinect读取" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/retinanet/detection.py</url>
-          <line>81</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -887,9 +697,19 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="T" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>T</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>img_depth</expression-string>
         <language-id>Python</language-id>
@@ -917,6 +737,21 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>np.asarray(points_cam.transform(T).points)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>np.asarray(points_robot.transform(T).points)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>points_robot.transform(T)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>np.asarray(colors)</expression-string>
         <language-id>Python</language-id>
@@ -947,88 +782,9 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>np.mean(rvecs)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>np.asarray(new_pc.colors)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>np.asarray(new_pc.points)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Program Files/Python37/Lib/site-packages/numpy/core/multiarray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-991083293/numpy/core/_multiarray_umath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1078">
-          <caret line="10738" column="8" selection-start-line="10738" selection-start-column="8" selection-end-line="10738" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python37/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7700">
-          <caret line="309" selection-start-line="309" selection-end-line="309" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/retinanet/xml2csv.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pos_estimation/moving_tracker.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/retinanet/d.png" />
-    <entry file="file://$PROJECT_DIR$/retinanet/gray.png" />
-    <entry file="file://C:/Program Files/Python37/Lib/site-packages/numpy/lib/npyio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="427" selection-start-line="427" selection-end-line="427" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process_data/depth_img_copy_mask.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualize_interaction/pc_visulization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding>
-            <element signature="e#93#113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python37/Lib/site-packages/pykinect2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://C:/Program Files/Python37/Lib/site-packages/pykinect2/PyKinectV2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-945">
-          <caret line="2196" column="39" selection-start-line="2196" selection-start-column="39" selection-end-line="2196" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/camera/chess.png" />
     <entry file="file://C:/Program Files/Python37/Lib/site-packages/pykinect2/PyKinectRuntime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4800">
@@ -1068,37 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pos_estimation/registration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1825">
-          <caret line="73" column="44" lean-forward="true" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
-          <folding>
-            <element signature="e#34#100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process_data/point_cloud_preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="e#34#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualize_interaction/def_grasp_pos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#34#42#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/process_data/about_os.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -1115,19 +840,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hardware/hand_eye_calibration/test.m" />
-    <entry file="file://$PROJECT_DIR$/hardware/hand_eye_calibration/armMat.mat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/camera/RGB_camera_choosen_pixels.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Azure-Kinect-Samples-master/pipe-to-python-samples/pipeClientReadImages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/hand_eye_calibration/armMat.mat" />
+    <entry file="file://$PROJECT_DIR$/hardware/camera/RGB_camera_choosen_pixels.txt" />
+    <entry file="file://$USER_HOME$/Desktop/Azure-Kinect-Samples-master/pipe-to-python-samples/pipeClientReadImages.py" />
     <entry file="file://$PROJECT_DIR$/hardware/robot/TCP_client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1160,13 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-991083293/cv2/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="11307" column="25" selection-start-line="11307" selection-start-column="15" selection-end-line="11307" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1205,10 +913,127 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/site-packages/keras_retinanet/utils/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-991083293/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92000">
+          <caret line="3680" column="8" selection-start-line="3680" selection-start-column="8" selection-end-line="3680" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/site-packages/keras/engine/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38550">
+          <caret line="1564" column="8" selection-start-line="1564" selection-start-column="8" selection-end-line="1564" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-991083293/cv2/cv2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="7428" column="4" selection-start-line="7428" selection-start-column="4" selection-end-line="7428" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-991083293/numpy/core/_multiarray_umath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="9565" column="18" selection-start-line="9565" selection-start-column="12" selection-end-line="9565" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/multiprocessing/managers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="572" selection-start-line="572" selection-end-line="572" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/camera/stereo_calibrate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process_data/point_cloud_preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+          <folding>
+            <element signature="e#34#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/multiprocessing/process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pos_estimation/registration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1925">
+          <caret line="86" column="26" lean-forward="true" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
+          <folding>
+            <element signature="e#34#100#0" expanded="true" />
+            <element signature="e#2268#2381#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/robot/poselog.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process_data/depth_img_copy_mask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualize_interaction/pc_visulization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+          <folding>
+            <element signature="e#93#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/camera/RGB_D.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264">
+          <caret line="347" selection-start-line="347" selection-end-line="347" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hardware/hand_eye_calibration/hand_eye_calibrate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1175">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        <state relative-caret-position="475">
+          <caret line="48" column="62" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -1217,78 +1042,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hardware/camera/kinect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="-1914">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/camera/stereo_calibrate.py">
+    <entry file="file://$PROJECT_DIR$/retinanet/detection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="275">
+          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="77" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/robot/urx_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-350">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/hand_eye_calibration_matlab/hand_eye_calibrate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualize_interaction/get_cam_direction_from_open3d_viewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualize_interaction/def_grasp_pos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#34#42#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-991083293/open3d/open3d/registration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="1150" column="8" selection-start-line="1150" selection-start-column="8" selection-end-line="1150" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/hand_eye_calibration_selfmade/calibrate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-991083293/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="3680" column="8" selection-start-line="3680" selection-start-column="8" selection-end-line="3680" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python37/Lib/site-packages/keras/engine/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="1564" column="8" selection-start-line="1564" selection-start-column="8" selection-end-line="1564" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python37/Lib/site-packages/keras_retinanet/utils/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/retinanet/detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-          <folding>
-            <element signature="e#15#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/camera/RGB_D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="339" column="29" selection-start-line="339" selection-start-column="29" selection-end-line="339" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#408#2713#0" />
-            <element signature="e#481#881#0" />
-            <element signature="e#3299#4250#1" />
-            <element signature="e#7132#9287#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
+        <state relative-caret-position="-17">
+          <caret line="163" column="50" selection-start-line="163" selection-start-column="50" selection-end-line="163" selection-end-column="50" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/hand_eye_calibration_selfmade/points_in_robot_base.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

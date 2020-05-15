@@ -13,8 +13,8 @@ class kinect2:
         self.cam = PyKinectRuntime.PyKinectRuntime(PyKinectV2.FrameSourceTypes_Color | PyKinectV2.FrameSourceTypes_Infrared | PyKinectV2.FrameSourceTypes_Depth)
         self.COLOR_HGT = self.cam.color_frame_desc.Height
         self.COLOR_WID = self.cam.color_frame_desc.Width
-        self.d_HGT = self.cam.depth_frame_desc.Height
-        self.d_WID = self.cam.depth_frame_desc.Width
+        self.DEPTH_HGT = self.cam.depth_frame_desc.Height
+        self.DEPTH_WID = self.cam.depth_frame_desc.Width
         
         
     def read_color_frame(self):
@@ -23,11 +23,11 @@ class kinect2:
         return frame_new
     def read_depth_frame(self):
         frame = self.cam.get_last_depth_frame()
-        frame_new = frame.reshape([self.d_HGT, self.d_WID])
+        frame_new = frame.reshape([self.DEPTH_HGT, self.DEPTH_WID])
         return frame_new
     def read_gray_frame(self):
         frame = self.cam.get_last_infrared_frame()
-        frame_new = frame.reshape([self.d_HGT, self.d_WID])
+        frame_new = frame.reshape([self.DEPTH_HGT, self.DEPTH_WID])
         return frame_new
 
 
@@ -39,8 +39,8 @@ class kinect4:
                    synchronized_images_only=True))
         self.COLOR_HGT = 1536
         self.COLOR_WID = 2048
-        self.d_HGT = 576
-        self.d_WID = 640
+        self.DEPTH_HGT = 576
+        self.DEPTH_WID = 640
         self.distCoeffs = np.array([0.513059, -2.77779, -0.000323, 0.000703, 1.62693, 0.391017, -2.593868, 1.548565])
         self.cameramtx = np.array([[976.405945, 0, 1020.967651],
                                     [0, 976.266479, 779.519653],
@@ -57,6 +57,41 @@ class kinect4:
         self.cam.disconnect()
 
 
+class kinect4_simulated:
+    def __init__(self):
+        print("假的Kinect4")
+        self.COLOR_HGT = 1536
+        self.COLOR_WID = 2048
+        self.DEPTH_HGT = 576
+        self.DEPTH_WID = 640
+        self.distCoeffs = np.array([0.513059, -2.77779, -0.000323, 0.000703, 1.62693, 0.391017, -2.593868, 1.548565])
+        self.cameramtx = np.array([[976.405945, 0, 1020.967651],
+                                   [0, 976.266479, 779.519653],
+                                   [0, 0, 1]])
+    
+    def get_capture(self):
+        color_filename, depth_filename = "D:/CODE&DATA/CODE/robot_grasp/data/scene/MYDATA/rgb/0.png", "D:/CODE&DATA/CODE/robot_grasp/data/scene/MYDATA/depth/0.png"
+        img_color = cv2.imread(color_filename)
+        img_depth = cv2.imread(depth_filename, cv2.IMREAD_ANYDEPTH)
+        return img_color, img_depth
+
+
+class BOP_simulated:
+    def __init__(self):
+        print("模拟BOP相机")
+        self.COLOR_HGT = 480
+        self.COLOR_WID = 640
+        self.DEPTH_HGT = 480
+        self.DEPTH_WID = 640
+        self.distCoeffs = np.array([0, 0, 0, 0, 0])
+        self.cameramtx = np.array([572.4114, 0.0, 325.2611, 0.0, 573.57043, 242.04899, 0.0, 0.0, 1.0], dtype=float).reshape(3, 3)
+    
+    def get_capture(self):
+        color_filename, depth_filename = "data/scene/BOP/rgb/000000.png", "data/scene/BOP/depth/000000.png"
+        img_color = cv2.imread(color_filename)
+        img_depth = cv2.imread(depth_filename, cv2.IMREAD_ANYDEPTH)
+        return img_color, img_depth
+    
 def read_save_kinect2():
     root = "../data/kinect2/"
     cam = kinect2()

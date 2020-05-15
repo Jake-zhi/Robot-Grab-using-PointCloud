@@ -5,7 +5,7 @@ import open3d as o3d
 from scipy.io import loadmat
 import time
 import glob
-from kinect import kinect4
+from kinect import kinect4, kinect4_simulated
 
 
 # numpy转点云格式
@@ -270,33 +270,33 @@ def rgb_d_to_pointcloud(depth_image, rgb_image, D_cam_intrinsic, RGB_cam_intrins
     return result_image
 
 
-# 深度图转点云
-def depth_2_pc(depth_image, cam_mtx):
-    IMG_HGT, IMG_WID = depth_image.shape
-    
-    # 建立ir像面坐标，900指某一点的深度900mm，注意是 Zc [x  y 1]
-    depth_oneline = depth_image.ravel()
-    
+# 生成深度图计算点云的速算表
+def generate_fast_calculate_table(img_shape, cam_mtx):
+    IMG_HGT, IMG_WID = img_shape[0:2]
     u0 = cam_mtx[0][2]
     v0 = cam_mtx[1][2]
     average_f = cam_mtx[0][0] / 2.0 + cam_mtx[1][1] / 2.0
     u = (np.arange(IMG_WID) - u0) / average_f
     v = (np.arange(IMG_HGT) - v0) / average_f
-    
+
     tab_x = np.tile(u, IMG_HGT)
     tab_y = np.repeat(v, IMG_WID)
-    
+    fast_calculate_table = (tab_x, tab_y)
+    return fast_calculate_table
+
+# 深度图转点云
+def depth_2_pc(depth_image, fast_calculate_table):
+    depth_oneline = depth_image.ravel()
+
     P_ir_set = np.zeros((depth_image.size, 3))
-    P_ir_set[:, 0] = depth_oneline * tab_x
-    P_ir_set[:, 1] = depth_oneline * tab_y
+    P_ir_set[:, 0] = depth_oneline * fast_calculate_table[0]
+    P_ir_set[:, 1] = depth_oneline * fast_calculate_table[1]
     P_ir_set[:, 2] = depth_oneline
     return np_to_pcd(P_ir_set)
-
+    
 
 # 深度图转点云，带颜色
-def depth_2_colored_pc(depth_image, color_image, cam_mtx):
-    IMG_HGT, IMG_WID = depth_image.shape
-    
+def depth_2_colored_pc(depth_image, color_image, fast_calculate_table):
     # 建立ir像面坐标，900指某一点的深度900mm，注意是 Zc [x  y 1]
     depth_oneline = depth_image.ravel()
     R = color_image[:, :, 0].reshape(-1, 1)
@@ -304,19 +304,9 @@ def depth_2_colored_pc(depth_image, color_image, cam_mtx):
     B = color_image[:, :, 2].reshape(-1, 1)
     colors = np.hstack((B, G, R))
     
-    
-    u0 = cam_mtx[0][2]
-    v0 = cam_mtx[1][2]
-    average_f = cam_mtx[0][0] / 2.0 + cam_mtx[1][1] / 2.0
-    u = (np.arange(IMG_WID) - u0) / average_f
-    v = (np.arange(IMG_HGT) - v0) / average_f
-    
-    tab_x = np.tile(u, IMG_HGT)
-    tab_y = np.repeat(v, IMG_WID)
-    
     P_ir_set = np.zeros((depth_image.size, 3))
-    P_ir_set[:, 0] = depth_oneline * tab_x
-    P_ir_set[:, 1] = depth_oneline * tab_y
+    P_ir_set[:, 0] = depth_oneline * fast_calculate_table[0]
+    P_ir_set[:, 1] = depth_oneline * fast_calculate_table[1]
     P_ir_set[:, 2] = depth_oneline
     
     pc = np_to_pcd(P_ir_set)
@@ -334,22 +324,27 @@ def D2RGB_Rt_from_extrinsic_matrix(rgb_transformation, d_transformation):
     t = rgb_t - d_t
     return R, t
 
-def kinect4_visualizer():
-    cam = kinect4()
+def kinect4_visualizer(just_one_picture=False):
+    cam = kinect4_simulated()
     img_color, img_depth = cam.get_capture()
     cameramtx = cam.cameramtx
-    pc_colored = depth_2_colored_pc(img_depth, img_color, cameramtx)
-    vis = o3d.visualization.Visualizer()
-    vis.create_window()
-    vis.add_geometry(pc_colored)
-    while 1:
-        print("*")
-        img_color, img_depth = cam.get_capture()
-        pc_colored.points = depth_2_colored_pc(img_depth, img_color, cameramtx).points
-        pc_colored.colors = depth_2_colored_pc(img_depth, img_color, cameramtx).colors
-        vis.update_geometry(pc_colored)
-        vis.poll_events()
-        vis.update_renderer()
+    fast_calculate_table = generate_fast_calculate_table(img_depth.shape, cameramtx)
+    pc_colored = depth_2_colored_pc(img_depth, img_color, fast_calculate_table)
+    if just_one_picture:
+        o3d.visualization.draw_geometries_with_editing([pc_colored])
+    else:
+        vis = o3d.visualization.Visualizer()
+        vis.create_window()
+        vis.add_geometry(pc_colored)
+        while 1:
+            # print("*")
+            img_color, img_depth = cam.get_capture()
+            pc_colored.points = depth_2_colored_pc(img_depth, img_color, fast_calculate_table).points
+            pc_colored.colors = depth_2_colored_pc(img_depth, img_color, fast_calculate_table).colors
+            vis.update_geometry(pc_colored)
+            vis.poll_events()
+            vis.update_renderer()
+kinect4_visualizer(True)
 
 def main():
     # 读取标定结果
